@@ -414,6 +414,16 @@ myFunctionWithEscapingClosure() { [weak self] (error) -> Void in
 
 * **3.1.7** Only use labeled breaks when breaking the nested loops.
 
+```swift
+outerLoop: for outterValue in outter {
+    for innerValue in inner {
+        if innerValue != "" {
+            break outerLoop
+           }
+    }
+}
+```
+
 * **3.1.8** Don't place parentheses around control flow predicates.
 
 ```swift
