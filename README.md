@@ -100,20 +100,17 @@ func pancake(with syrup: Syrup) -> Pancake {
 }
 ```
 
-* **1.9** We follow Xcode's recommended indentation style (i.e. your code should not change if CTRL-I is pressed). When declaring a function that spans multiple lines, prefer using that syntax to which Xcode, as of version 7.3, defaults.
+* **1.9** We prefer to have function declaration and if conditions in one line (120 characters), if possible. If you find it can't be fit within one line, you are probably making the function doing too much as taking too many parameters or the if statement is too hard to grasp. 
 
 ```swift
 // Xcode indentation for a function declaration that spans multiple lines
-func myFunctionWithManyParameters(parameterOne: String,
-                                  parameterTwo: String,
-                                  parameterThree: String) {
+func myFunctionWithManyParameters(parameterOne: String, parameterTwo: String, parameterThree: String) {
     // Xcode indents to here for this kind of statement
     print("\(parameterOne) \(parameterTwo) \(parameterThree)")
 }
 
 // Xcode indentation for a multi-line `if` statement
-if myFirstValue > (mySecondValue + myThirdValue)
-    && myFourthValue == .someEnumValue {
+if myFirstValue > (mySecondValue + myThirdValue) && myFourthValue == .someEnumValue {
 
     // Xcode indents to here for this kind of statement
     print("Hello, World!")
