@@ -581,7 +581,7 @@ func handleDigit(_ digit: Int) throws {
 
 * **3.5.1** The only time you should be using implicitly unwrapped optionals is with `@IBOutlet`s. In every other case, it is better to use a non-optional or regular optional property. Yes, there are cases in which you can probably "guarantee" that the property will never be `nil` when used, but it is better to be safe and consistent. Similarly, don't use force unwraps.
 
-* **3.5.2** Don't use `as!` or `try!`.
+* **3.5.2** Advoid using `as!` or `try!`.
 
 * **3.5.3** If you don't plan on actually using the value stored in an optional, but need to determine whether or not this value is `nil`, explicitly check this value against `nil` as opposed to using `if let` syntax.
 
@@ -597,18 +597,7 @@ if let _ = someOptional {
 }
 ```
 
-* **3.5.4** Don't use `unowned`. You can think of `unowned` as somewhat of an equivalent of a `weak` property that is implicitly unwrapped (though `unowned` has slight performance improvements on account of completely ignoring reference counting). Since we don't ever want to have implicit unwraps, we similarly don't want `unowned` properties.
-
-```swift
-// PREFERRED
-weak var parentViewController: UIViewController?
-
-// NOT PREFERRED
-weak var parentViewController: UIViewController!
-unowned var parentViewController: UIViewController
-```
-
-* **3.5.5** When unwrapping optionals, use the same name for the unwrapped constant or variable where appropriate.
+* **3.5.4** When unwrapping optionals, use the same name for the unwrapped constant or variable where appropriate.
 
 ```swift
 guard let myValue = myValue else {
