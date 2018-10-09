@@ -919,16 +919,11 @@ guard let thingThree = thingThree else {
 }
 ```
 
-* **3.11.7** Don’t use one-liners for `guard` statements.
+* **3.11.7** It's okay to use one-liners for `guard` statements.
 
 
 ```swift
-// PREFERRED
-guard let thingOne = thingOne else {
-    return
-}
-
-// NOT PREFERRED
+// It's OKAY to use one-liner
 guard let thingOne = thingOne else { return }
 ```
 
