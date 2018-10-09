@@ -412,7 +412,7 @@ myFunctionWithEscapingClosure() { [weak self] (error) -> Void in
 }
 ```
 
-* **3.1.7** Don't use labeled breaks.
+* **3.1.7** Only use labeled breaks when breaking the nested loops.
 
 * **3.1.8** Don't place parentheses around control flow predicates.
 
