@@ -103,13 +103,13 @@ func pancake(with syrup: Syrup) -> Pancake {
 * **1.9** We prefer to have function declaration and if conditions in one line (120 characters), if possible. If you find it can't be fit within one line, you are probably making the function doing too much as taking too many parameters or the if statement is too hard to grasp. 
 
 ```swift
-// Xcode indentation for a function declaration that spans multiple lines
+// Xcode indentation for a function declaration that has multiple paramethers
 func myFunctionWithManyParameters(parameterOne: String, parameterTwo: String, parameterThree: String) {
     // Xcode indents to here for this kind of statement
     print("\(parameterOne) \(parameterTwo) \(parameterThree)")
 }
 
-// Xcode indentation for a multi-line `if` statement
+// Xcode indentation for a multi-condition `if` statement
 if myFirstValue > (mySecondValue + myThirdValue) && myFourthValue == .someEnumValue {
 
     // Xcode indents to here for this kind of statement
@@ -117,13 +117,10 @@ if myFirstValue > (mySecondValue + myThirdValue) && myFourthValue == .someEnumVa
 }
 ```
 
-* **1.10** When calling a function that has many parameters, put each argument on a separate line with a single extra indentation.
+* **1.10** When calling a function that has many parameters, put all arguments on one line if no dictionary or array is defined.
 
 ```swift
-someFunctionWithManyArguments(
-    firstArgument: "Hello, I am a string",
-    secondArgument: resultFromSomeFunction(),
-    thirdArgument: someOtherLocalProperty)
+someFunctionWithManyArguments(firstArgument: "Hello, I am a string", secondArgument: resultFromSomeFunction(), thirdArgument: someOtherLocalProperty)
 ```
 
 * **1.11** When dealing with an implicit array or dictionary large enough to warrant splitting it into multiple lines, treat the `[` and `]` as if they were braces in a method, `if` statement, etc. Closures in a method should be treated similarly.
