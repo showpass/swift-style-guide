@@ -939,24 +939,22 @@ Be sure to check out the full set of features available in Swift's comment marku
 
 Guidelines:
 
-* **4.1.1** 160 character column limit (like the rest of the code).
+* **4.1.1** 120 character column limit (like the rest of the code).
 
-* **4.1.2** Even if the doc comment takes up one line, use block (`/** */`).
+* **4.1.2** Use short cut from XCode: Put cursor `Option + Command + /`
 
 * **4.1.3** Do not prefix each additional line with a `*`.
 
-* **4.1.4** Use the new `- parameter` syntax as opposed to the old `:param:` syntax (make sure to use lower case `parameter` and not `Parameter`). Option-click on a method you wrote to make sure the quick help looks correct.
+* **4.1.4** Use the new `- parameter` syntax as opposed to the old `:param:` syntax (make sure to use lower case `parameter` and not `Parameter`). Option-click on a method you wrote to make sure the quick help looks correct. Again, use the XCode short cut.
 
 ```swift
 class Human {
-    /**
-     This method feeds a certain food to a person.
-
-     - parameter food: The food you want to be eaten.
-     - parameter person: The person who should eat the food.
-     - returns: True if the food was eaten by the person; false otherwise.
-    */
-    func feed(_ food: Food, to person: Human) -> Bool {
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - application: <#application description#>
+    ///   - deviceToken: <#deviceToken description#>
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // ...
     }
 }
