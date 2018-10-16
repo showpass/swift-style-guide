@@ -30,7 +30,7 @@ This guide was last updated for Swift 4.0 on February 14, 2018.
 ## 1. Code Formatting
 
 * **1.1** Use 2 spaces for tabs and indents (Xcode->Preferences->Text Editing->Indentation->Tab width & Indent width).
-* **1.2** Avoid uncomfortably long lines with a hard maximum of 120 characters per line (Xcode->Preferences->Text Editing->Page guide at column: 120 is helpful for this)
+* **1.2** Avoid uncomfortably long lines. Define a descriptive variable name to shorten the line.
 * **1.3** Ensure that there is a newline at the end of every file.
 * **1.4** Ensure that there is no trailing whitespace anywhere (Xcode->Preferences->Text Editing->Automatically trim trailing whitespace + Including whitespace-only lines).
 * **1.5** Do not place opening braces on new lines - we use the [1TBS style](https://en.m.wikipedia.org/wiki/Indentation_style#1TBS).
@@ -100,7 +100,7 @@ func pancake(with syrup: Syrup) -> Pancake {
 }
 ```
 
-* **1.9** We prefer to have function declaration and if conditions in one line (120 characters), if possible. If you find it can't be fit within one line, you are probably making the function doing too much as taking too many parameters or the if statement is too hard to grasp. 
+* **1.9** We prefer to have function declaration and if conditions in one line if possible. If you find it can't be fit within one line, you are probably making the function doing too much as taking too many parameters or the if statement is too hard to grasp. You can also define descriptive variables to shorten your code.
 
 ```swift
 // Xcode indentation for a function declaration that has multiple paramethers
@@ -939,13 +939,11 @@ Be sure to check out the full set of features available in Swift's comment marku
 
 Guidelines:
 
-* **4.1.1** 120 character column limit (like the rest of the code).
+* **4.1.1** Use short cut from XCode: Put cursor `Option + Command + /`
 
-* **4.1.2** Use short cut from XCode: Put cursor `Option + Command + /`
+* **4.1.2** Do not prefix each additional line with a `*`.
 
-* **4.1.3** Do not prefix each additional line with a `*`.
-
-* **4.1.4** Use the new `- parameter` syntax as opposed to the old `:param:` syntax (make sure to use lower case `parameter` and not `Parameter`). Option-click on a method you wrote to make sure the quick help looks correct. Again, use the XCode short cut.
+* **4.1.3** Use the new `- parameter` syntax as opposed to the old `:param:` syntax (make sure to use lower case `parameter` and not `Parameter`). Option-click on a method you wrote to make sure the quick help looks correct. Again, use the XCode short cut.
 
 ```swift
 class Human {
@@ -960,9 +958,9 @@ class Human {
 }
 ```
 
-* **4.1.5** If you’re going to be documenting the parameters/returns/throws of a method, document all of them, even if some of the documentation ends up being somewhat repetitive (this is preferable to having the documentation look incomplete). Sometimes, if only a single parameter warrants documentation, it might be better to just mention it in the description instead.
+* **4.1.4** If you’re going to be documenting the parameters/returns/throws of a method, document all of them, even if some of the documentation ends up being somewhat repetitive (this is preferable to having the documentation look incomplete). Sometimes, if only a single parameter warrants documentation, it might be better to just mention it in the description instead.
 
-* **4.1.6** For complicated classes, describe the usage of the class with some potential examples as seems appropriate. Remember that markdown syntax is valid in Swift's comment docs. Newlines, lists, etc. are therefore appropriate.
+* **4.1.5** For complicated classes, describe the usage of the class with some potential examples as seems appropriate. Remember that markdown syntax is valid in Swift's comment docs. Newlines, lists, etc. are therefore appropriate.
 
 ```swift
 /**
@@ -995,7 +993,7 @@ class MyAwesomeClass {
 }
 ```
 
-* **4.1.7** When mentioning code, use code ticks - \`
+* **4.1.6** When mentioning code, use code ticks - \`
 
 ```swift
 /**
@@ -1007,7 +1005,7 @@ func myFunction() {
 }
 ```
 
-* **4.1.8** When writing doc comments, prefer brevity where possible.
+* **4.1.7** When writing doc comments, prefer brevity where possible.
 
 ### 4.2 Other Commenting Guidelines
 
